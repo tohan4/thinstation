@@ -1,0 +1,11 @@
+#the connect error... can be resolved by sym-linking the cisco ca directory to the system ca directory as cisco only seems to include one root certificate by default. Or you can install the certificate chain from the VPN provider - sym-linking the system certs worked fine for me. 
+# cd /opt/.cisco/certificates
+# sudo mv ca ca.orig
+# sudo ln -sf /etc/ssl/certs/ ca
+# sudo /etc/init.d/vpnagentd restart
+
+Add in icon
+
+add in ip/fqdn for Connect to..
+enable untruested by default
+

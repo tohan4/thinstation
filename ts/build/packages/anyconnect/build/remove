@@ -1,0 +1,16 @@
+#!/bin/bash
+# little script to build a thinstation package dir from vmware-view technical preview client
+INSTALLDIR=./packages/anyconnect
+
+rm -rf $INSTALLDIR/bin
+rm -f $INSTALLDIR/lib/libaccurl.so.4
+rm -rf $INSTALLDIR/help
+rm -rf $INSTALLDIR/profile
+rm -rf $INSTALLDIR/script
+rm -rf $INSTALLDIR/opt
+rm -rf $INSTALLDIR/pixmaps
+rm -f $INSTALLDIR/ACManifestVPN.xml  
+rm -f $INSTALLDIR/AnyConnectLocalPolicy.xsd 
+rm -f $INSTALLDIR/OpenSource.html   
+rm -f $INSTALLDIR/update.txt
+rm -f $INSTALLDIR/*.log

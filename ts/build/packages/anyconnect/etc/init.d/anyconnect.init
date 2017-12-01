@@ -1,0 +1,29 @@
+#! /bin/sh
+
+. /etc/thinstation.global
+
+
+case "$1" in
+  init)
+    if ! pkg_initialized $PACKAGE; then
+	/etc/init.d/vpnagentd start
+	pkg_set_init_flag $PACKAGE
+    fi
+    #copy the .anyconnect which contains default server details
+    cp -f /etc/skel/.anyconnect $HOME/.anyconnect
+    ;;
+  console)
+    ;;
+  window)
+    ;;
+  fullscreen)
+    ;;
+  help)
+   echo "Usage: $0 init"
+   ;;
+  *)
+    exit 1
+    ;;
+esac
+
+exit 0

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export PACKAGE=hplip
+repackage -c

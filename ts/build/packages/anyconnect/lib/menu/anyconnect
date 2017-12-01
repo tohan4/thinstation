@@ -1,0 +1,1 @@
+package="anyconnect"; needs="x11"; menu="Remote Access"; title="Cisco AnyConnect"; command="pkg window anyconnect"; nodesktop="false"

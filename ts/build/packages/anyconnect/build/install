@@ -1,0 +1,18 @@
+#!/bin/sh
+gzname=`basename $1`
+package=anyconnect
+INSTALLDIR=./packages/anyconnect
+
+returnval=$?
+
+echo "Installing AnyConnect"
+
+sh $INSTALLDIR/build/vpn/vpn_install.sh
+ln -s /opt/cisco/anyconnect/lib/libaccurl.so.4.3.0 $INSTALLDIR/lib/libaccurl.so.4 
+
+#Cleanup
+rm -f $INSTALLDIR/opt/cisco/anyconnect/*.log
+rm -f $INSTALLDIR/opt/cisco/anyconnect/bin/vpn_uninstall.sh
+rm -f $INSTALLDIR/opt/cisco/anyconnect/bin/anyconnect_uninstall.sh
+
+exit $returnval
